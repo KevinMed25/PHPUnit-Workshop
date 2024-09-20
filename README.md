@@ -45,3 +45,4 @@ En caso de no encontrar clases, comando depuración de autoload:
   `vendor/bin/phpunit --bootstrap vendor/autoload.php tests --filter 'testSomething'`
 - Comando para tener un checklist de los test realizados, modificable con la libreria TestDox <br>
   `vendor/bin/phpunit --bootstrap vendor/autoload.php tests --testdox`
+- [Visita la documentación de PHPUnit](https://docs.phpunit.de/en/11.3/index.html)
