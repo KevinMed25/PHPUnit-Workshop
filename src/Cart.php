@@ -1,5 +1,7 @@
 <?php
+
 namespace App;
+
 class Cart {
     private $products = [];
 
@@ -9,7 +11,6 @@ class Cart {
 
     public function getTotal() {
         $total = 0;
-        // Use $this->products to access the class property
         foreach ($this->products as $product) {
             $total += $product->getPrice();
         }
@@ -22,5 +23,13 @@ class Cart {
 
     public function isEmpty() {
         return empty($this->products);
+    }
+
+    public function getProducts() {
+        return $this->products;
+    }
+
+    public function clearCart() {
+        $this->products = [];
     }
 }
