@@ -1,9 +1,6 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/php:8.3",
-  "features": {
-    "ghcr.io/devcontainers/features/php:1": {
-      "installComposer": true,
-      "installXdebug": false
-    }
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "."
   }
 }
