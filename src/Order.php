@@ -10,9 +10,9 @@ class Order {
     }
 
     public function getTotalWithTax() {
-        // if ($this->cart->isEmpty()) {
-        //     throw new Exception('Cannot process an empty cart');
-        // }
+        if ($this->cart->isEmpty()) {
+            throw new \Exception('Cannot process an empty cart');
+        }
 
         $total = $this->cart->getTotal();
         return $total + ($total * $this->taxRate);
