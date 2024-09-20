@@ -15,4 +15,3 @@ class ProductTest extends TestCase {
         $this->assertEquals(1200, $product->getPrice());
     }
 }
-
