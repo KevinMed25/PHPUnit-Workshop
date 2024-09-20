@@ -13,7 +13,7 @@ class Order {
         $this->taxRate = $taxRate;
     }
 
-    public function getTotalWithTax() {
+    public function getTotalWithTax(): float {
         if ($this->cart->isEmpty()) {
             throw new Exception('Cannot process an empty cart');
         }
