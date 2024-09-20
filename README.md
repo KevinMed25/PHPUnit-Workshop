@@ -18,3 +18,6 @@ composer require --dev phpunit/phpunit
 En caso de no encontrar clases, comando depuración de autoload
 
 composer dump-autoload
+
+# Caso de estudio
+El objetivo de este caso de estudio es el de aplicar y demostrar las funcionalidades de la herramienta framework PHPUnit, para esto se considera el siguiente sistema simplificado de comercio electrónico uttilizando clases en PHP. El sistema permite al cliente agregar productos a un carritos de compra, calcular el costo total el carrito de compras y aplica impuestos al crear la orden.
