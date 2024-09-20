@@ -1,5 +1,9 @@
 <?php
+
 namespace App;
+
+use Exception;
+
 class Order {
     private $cart;
     private $taxRate;
@@ -11,7 +15,7 @@ class Order {
 
     public function getTotalWithTax() {
         if ($this->cart->isEmpty()) {
-            throw new \Exception('Cannot process an empty cart');
+            throw new Exception('Cannot process an empty cart');
         }
 
         $total = $this->cart->getTotal();
