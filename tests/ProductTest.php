@@ -1,6 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
+use App\Product;
 
 class ProductTest extends TestCase {
 
@@ -14,4 +15,4 @@ class ProductTest extends TestCase {
         $this->assertEquals(1200, $product->getPrice());
     }
 }
-?>
+

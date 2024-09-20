@@ -1,6 +1,8 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
+use App\Cart;
+use App\Product;
 
 class CartTest extends TestCase {
 
@@ -36,4 +38,4 @@ class CartTest extends TestCase {
         $this->assertEquals(1250, $cart->getTotal());
     }
 }
-?>
+
