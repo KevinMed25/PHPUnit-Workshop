@@ -22,11 +22,11 @@ composer dump-autoload
 # Instrucciones para uso en local
 
 ## Instalación de PHPUnits por composer
-composer require --dev phpunit/phpunit
+* composer require --dev phpunit/phpunit
 
 ## Comando para realizar todos los test
-vendor/bin/phpunit --bootstrap vendor/autoload.php tests
+* vendor/bin/phpunit --bootstrap vendor/autoload.php tests
 
 ## Alternativa para realizar un test por separado
-vendor/bin/phpunit --bootstrap vendor/autoload.php tests --filter 'testSomething'
+* vendor/bin/phpunit --bootstrap vendor/autoload.php tests --filter 'testSomething'
 
