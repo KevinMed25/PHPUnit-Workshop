@@ -32,18 +32,28 @@ class CartTest extends TestCase {
     }
 
     public function testClearCart() {
-
+        $this->cart->addProduct(new Product('Laptop', 1000));
+        $this->cart->clearCart();
+        $this->assertTrue($this->cart->isEmpty(), 'Cart should be empty');
+        $this->assertNull($this->cart->getProducts()[0] ?? null, 'Product should be null after cart is cleared');
     }
 
     public function testTotalCalculation() {
+        $product1 = new Product('Laptop', 1000);
+        $product2 = new Product('Phone', 500);
+        $this->cart->addProduct($product1);
+        $this->cart->addProduct($product2);
 
+        $this->assertEquals(1500, $this->cart->getTotal());
+        $this->assertNotEquals(1600, $this->cart->getTotal());
     }
 
     public function testIsEmptyReturnsTrueWhenCartIsEmpty() {
-
+        $this->assertTrue($this->cart->isEmpty(), 'Cart should be empty initially');
     }
 
     public function testIsEmptyReturnsFalseWhenCartIsNotEmpty() {
-
+        $this->cart->addProduct(new Product('Laptop', 1000));
+        $this->assertFalse($this->cart->isEmpty(), 'Cart should not be empty after adding a product');
     }
 }
