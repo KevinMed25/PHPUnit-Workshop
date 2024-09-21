@@ -5,11 +5,11 @@ namespace App;
 class Cart {
     private $products = [];
 
-    public function addProduct(Product $product) {
+    public function addProduct(Product $product): void {
         $this->products[] = $product;
     }
 
-    public function getTotal() {
+    public function getTotal(): float {
         $total = 0;
         foreach ($this->products as $product) {
             $total += $product->getPrice();
@@ -17,19 +17,19 @@ class Cart {
         return $total;
     }
 
-    public function countItems() {
+    public function countItems(): int {
         return count($this->products);
     }
 
-    public function isEmpty() {
+    public function isEmpty(): bool {
         return empty($this->products);
     }
 
-    public function getProducts() {
+    public function getProducts(): array {
         return $this->products;
     }
 
-    public function clearCart() {
+    public function clearCart(): void {
         $this->products = [];
     }
 }

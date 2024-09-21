@@ -1,8 +1,10 @@
-<?php
+<?php declare(strict_types=1); //obligamos a cumplir con los tipos de datos
 
 namespace Tests;
 
 use PHPUnit\Framework\TestCase;
+use PHPUnit\Framework\Attributes\Test; // Permite quitar "test" al numbre del método de test
+use PHPUnit\Framework\Attributes\TestDox; //Sirve para añadir uns descripción a la prueba
 use App\Cart;
 use App\Product;
 
@@ -20,8 +22,13 @@ class CartTest extends TestCase {
         $this->cart = null;
     }
 
-    public function testAddProduct() {
-
+    #[Test] //alternativa a usar testAddProduct como nombre de la funnción y que sea reconocida.
+    #[TestDox('Método AddProduc - agrega un producto al carrito de compra')]
+    public function AddProduct() {
+        $product = new Product('Laptop', 1000);
+        $this->cart->addProduct($product);
+        $this->assertNotNull($this->cart->getProducts(), 'Product should not be null');
+        $this->assertTrue($this->cart->countItems() > 0, 'Cart should have items');
     }
 
     public function testClearCart() {

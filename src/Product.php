@@ -11,11 +11,11 @@ class Product {
         $this->price = $price;
     }
 
-    public function getName() {
+    public function getName(): string {
         return $this->name;
     }
 
-    public function getPrice() {
+    public function getPrice(): float {
         return $this->price;
     }
 }
