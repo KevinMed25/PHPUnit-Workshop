@@ -40,7 +40,7 @@ En caso de no encontrar clases, comando depuración de autoload:
 -  Ejecutar las pruebas con el comando: <br>
    `vendor/bin/phpunit --boostrap vendor/autoload.php tests`
 
-# Otros comanddos de ejecución
+# Otros comandos de ejecución
 - Para filtrar o ejecutar un test específico: <br>
   `vendor/bin/phpunit --bootstrap vendor/autoload.php tests --filter 'testSomething'`
 - Comando para tener un checklist de los test realizados, modificable con la libreria TestDox <br>
