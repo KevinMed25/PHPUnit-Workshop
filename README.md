@@ -34,6 +34,10 @@ En caso de no encontrar clases, comando depuración de autoload:
 `composer dump-autoload`
 
 # Instrucciones para uso en local
+- Uso de PHP
+[PHP: Hypertext Preprocessor](https://windows.php.net/download#php-8.3)
+- Uso de Composer
+[Composer A Dependency Manager for PHP](https://getcomposer.org/download/) 
 - Instalar PHPUnit utilizando composer, usar el comando: <br>
    `composer require --dev phpunit/phpunit`
 
