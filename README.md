@@ -42,7 +42,7 @@ En caso de no encontrar clases, comando depuración de autoload:
    `composer require --dev phpunit/phpunit`
 
 -  Ejecutar las pruebas con el comando: <br>
-   `vendor/bin/phpunit --boostrap vendor/autoload.php tests`
+   `vendor/bin/phpunit --bootstrap vendor/autoload.php tests`
 
 # Otros comandos de ejecución
 - Para filtrar o ejecutar un test específico: <br>
